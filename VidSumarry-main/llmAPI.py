@@ -1,7 +1,7 @@
 import requests
 
 # Your Hugging Face API Key
-API_KEY = ""
+API_KEY = "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"
 
 # Model Endpoint
 url = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B"
