@@ -1,0 +1,322 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(2, 1, 1, 0.3);
+  z-index: 3;
+  padding: 0px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Original keyboard animation styles */
+.keyboard {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5vw;
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+  letter-spacing: -6vw;
+  margin-left: -50px;
+}
+
+.key {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5vw;
+  display: inline-block;
+  letter-spacing: 0vw;
+  transition: transform 0.2s;
+  color: rgb(0, 0, 0);
+}
+
+/* (Animation keyframes remain unchanged) */
+@keyframes pressDown1 {
+  30%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(10px);
+  }
+}
+@keyframes pressDown2 {
+  70%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+}
+@keyframes pressDown3 {
+  30%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(10px);
+  }
+}
+@keyframes pressDown4 {
+  40%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(10px);
+  }
+}
+@keyframes pressDown5 {
+  20%,
+  30%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+}
+@keyframes pressDown6 {
+  60%,
+  70%,
+  100% {
+    transform: translateY(0);
+  }
+  65% {
+    transform: translateY(10px);
+  }
+}
+@keyframes pressDown7 {
+  10%,
+  20%,
+  100% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(10px);
+  }
+}
+@keyframes pressDown8 {
+  35%,
+  45%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+}
+@keyframes pressDown9 {
+  50%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+  55% {
+    transform: translateY(10px);
+  }
+}
+@keyframes pressDown10 {
+  25%,
+  35%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(10px);
+  }
+}
+@keyframes pressDown11 {
+  45%,
+  55%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.key:nth-child(1) {
+  animation: pressDown1 2s infinite;
+}
+.key:nth-child(2) {
+  animation: pressDown2 3s infinite;
+}
+.key:nth-child(3) {
+  animation: pressDown3 4s infinite;
+}
+.key:nth-child(4) {
+  animation: pressDown4 2.5s infinite;
+}
+.key:nth-child(5) {
+  animation: pressDown5 2.5s infinite;
+}
+.key:nth-child(6) {
+  animation: pressDown6 3.5s infinite;
+}
+.key:nth-child(7) {
+  animation: pressDown7 2.2s infinite;
+}
+.key:nth-child(8) {
+  animation: pressDown8 3.2s infinite;
+}
+.key:nth-child(9) {
+  animation: pressDown9 2.8s infinite;
+}
+.key:nth-child(10) {
+  animation: pressDown10 3s infinite;
+}
+.key:nth-child(11) {
+  animation: pressDown11 3.5s infinite;
+}
+
+/* Original navbtn button styling */
+.navbtn {
+  padding: 15px 35px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #ffffff;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+}
+.nav-container {
+  width: auto;
+}
+.navbtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #33aaff;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.navbtn:hover {
+  color: #e8e8e8;
+}
+
+.navbtn:hover::before {
+  width: 100%;
+}
+
+#hbtn {
+  margin-left: 10px;
+}
+
+/* Container for nav buttons (desktop) */
+.nav-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 5%;
+}
+
+/* Hamburger icon is hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 38px;
+  cursor: pointer;
+  padding-left: 15px;
+}
+
+/* Mobile dropdown menu styling */
+.mobile-menu {
+  list-style: none;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  gap: 20px;
+  background: #9dc9ff;
+  box-shadow: 0 4px 10px rgba(2, 1, 1, 0.3);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-right: 5px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1000px) {
+  /* Keep the keyboard animation horizontal */
+  .keyboard {
+    font-size: 5%;
+    width: 90%;
+    /* align-items: center; */
+    justify-content: center;
+    display: flex;
+  }
+
+  .mobile-menu {
+    padding-right: 10px;
+  }
+  .navbtn {
+    width: 20%;
+    margin-left: 0%;
+    justify-content: center;
+    display: flex;
+  }
+  .key {
+    font-size: 50px;
+  }
+
+  /* Hide the original nav buttons on mobile */
+  .nav-container {
+    display: none;
+  }
+
+  /* Show hamburger icon */
+  .hamburger {
+    display: block;
+    display: flex;
+  }
+}
+
+/* @media (max-width: 480px) {
+    .keyboard {
+      font-size: 10vw;
+      margin-right: 200px;
+    }
+    
+    .key {
+      font-size: 40px;
+    }
+  } */
+
+@media (min-width: 1000px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+#logbtn::before {
+  background-color: #e90602;
+}

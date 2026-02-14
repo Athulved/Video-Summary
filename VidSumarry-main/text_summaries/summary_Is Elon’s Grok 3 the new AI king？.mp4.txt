@@ -1,0 +1,13 @@
+Here's a summary of the text in plain English:
+
+A new artificial intelligence (AI) model called GROC3 has been released and it's really good at understanding and generating human-like language. It's special because it's not censored, which means it can create content that might be considered offensive or illegal in some places. GROC3 is also unique because it has access to a huge amount of data from Twitter, which helps it learn and improve.
+
+The creator of GROC3, Elon, is trying to compete with other AI companies like OpenAI and Facebook. GROC3 is currently the best AI model according to some benchmarks, but it's not perfect and there are some limitations to its abilities.
+
+The AI model is so powerful that it can generate images and write poems that might be considered offensive. However, this also means that it could be used to create content that's not appropriate or even illegal in some countries.
+
+Despite its limitations, GROC3 is a significant achievement and it's expected to get even better with future updates. The company behind GROC3 is planning to release an even more powerful version called SuperGROC, which will cost $30 per month.
+
+The text also mentions that the AI industry is highly competitive, with companies like Facebook and OpenAI trying to outdo each other. There are concerns about how these AI models are trained, with some companies using pirated books and articles to train their models.
+
+Overall, GROC3 is a significant development in the field of AI and it has the potential to change the way we interact with language.

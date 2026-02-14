@@ -1,0 +1,61 @@
+2025-03-30 10:38:44,724 - __main__ - INFO - All models loaded successfully
+2025-03-30 10:38:44,725 - __main__ - INFO - Starting video summarization server
+2025-03-30 10:38:44,731 - werkzeug - WARNING -  * Debugger is active!
+2025-03-30 10:38:44,735 - werkzeug - INFO -  * Debugger PIN: 119-024-508
+2025-03-30 10:38:59,094 - __main__ - INFO - Received upload request
+2025-03-30 10:38:59,095 - __main__ - INFO - Processing YouTube link: https://www.youtube.com/watch?v=b0XI-cbel1U
+2025-03-30 10:38:59,095 - __main__ - INFO - Starting YouTube download from URL: https://www.youtube.com/watch?v=b0XI-cbel1U
+2025-03-30 10:38:59,095 - __main__ - INFO - Starting YouTube download with yt-dlp...
+2025-03-30 10:39:13,444 - __main__ - ERROR - YouTube download error: Maximum number of downloads reached, stopping due to --max-downloads
+2025-03-30 10:39:13,446 - __main__ - ERROR - Traceback (most recent call last):
+  File "c:\Projects\Main Project\FINAL video summarization\VidSumarry\server.py", line 115, in download_youtube_video
+    info = ydl.extract_info(url, download=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abhir\anaconda3\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1626, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abhir\anaconda3\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1637, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abhir\anaconda3\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1793, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abhir\anaconda3\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1852, in process_ie_result
+    ie_result = self.process_video_result(ie_result, download=download)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abhir\anaconda3\Lib\site-packages\yt_dlp\YoutubeDL.py", line 3043, in process_video_result
+    raise MaxDownloadsReached
+yt_dlp.utils.MaxDownloadsReached: Maximum number of downloads reached, stopping due to --max-downloads
+
+2025-03-30 10:39:13,446 - __main__ - ERROR - Error in upload route: Failed to download YouTube video: Maximum number of downloads reached, stopping due to --max-downloads
+2025-03-30 10:39:13,448 - __main__ - ERROR - Traceback (most recent call last):
+  File "c:\Projects\Main Project\FINAL video summarization\VidSumarry\server.py", line 115, in download_youtube_video
+    info = ydl.extract_info(url, download=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abhir\anaconda3\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1626, in extract_info
+    return self.__extract_info(url, self.get_info_extractor(key), download, extra_info, process)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abhir\anaconda3\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1637, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abhir\anaconda3\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1793, in __extract_info
+    return self.process_ie_result(ie_result, download, extra_info)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abhir\anaconda3\Lib\site-packages\yt_dlp\YoutubeDL.py", line 1852, in process_ie_result
+    ie_result = self.process_video_result(ie_result, download=download)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\abhir\anaconda3\Lib\site-packages\yt_dlp\YoutubeDL.py", line 3043, in process_video_result
+    raise MaxDownloadsReached
+yt_dlp.utils.MaxDownloadsReached: Maximum number of downloads reached, stopping due to --max-downloads
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Projects\Main Project\FINAL video summarization\VidSumarry\server.py", line 269, in upload_video
+    video_path = download_youtube_video(youtube_link, UPLOAD_FOLDER)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Projects\Main Project\FINAL video summarization\VidSumarry\server.py", line 164, in download_youtube_video
+    raise Exception(f"Failed to download YouTube video: {str(e)}")
+Exception: Failed to download YouTube video: Maximum number of downloads reached, stopping due to --max-downloads
+
+2025-03-30 10:39:13,449 - werkzeug - INFO - 127.0.0.1 - - [30/Mar/2025 10:39:13] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -

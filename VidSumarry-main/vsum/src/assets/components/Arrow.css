@@ -1,0 +1,301 @@
+/* 
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --color-text: #ffffff;
+    --color-background: hsl(205deg 100% 60%);
+    --color-outline: #0894ad80;
+    --color-shadow: #00000080;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.btn-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30%;
+    padding-left: 35rem;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 10vw; 
+    color: var(--color-text);
+    background: var(--color-background);
+    transition: 1s;
+    border-radius: 100px;
+    width: 80%;
+    height: auto;
+    min-height: 100px;
+    box-shadow: 0 0 0.2em 0 var(--color-background);
+}
+
+.btn-content:hover,
+.btn-content:focus {
+    transition: 0.5s;
+    -webkit-animation: btn-content 1s;
+    animation: btn-content 1s;
+    outline: 0.1em solid transparent;
+    outline-offset: 0.2em;
+    box-shadow: 0 0 0.4em 0 var(--color-background);
+}
+
+.btn-content .icon-arrow {
+    transition: 0.5s;
+    margin-right: 0px;
+    transform: scale(0.9);
+    width: 1em; 
+    height: 1em; 
+    margin-left: 0.5em; 
+}
+
+.btn-content:hover .icon-arrow {
+    transition: 0.5s;
+    margin-right: 1.5em; 
+}
+
+.icon-arrow {
+    width: 1em; 
+    height: 1em; 
+    margin-left: 0.5em; 
+    position: relative;
+    top: 6%;
+}
+
+
+#arrow-icon-one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+
+.btn-content:hover #arrow-icon-three {
+    animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-content:hover #arrow-icon-one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-content:hover #arrow-icon-two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+
+
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+
+    50% {
+        fill: var(--color-background);
+    }
+
+    100% {
+        fill: white;
+    }
+}
+
+
+@-webkit-keyframes btn-content {
+    0% {
+        outline: 0.2em solid var(--color-background);
+        outline-offset: 0;
+    }
+}
+
+@keyframes btn-content {
+    0% {
+        outline: 0.2em solid var(--color-background);
+        outline-offset: 0;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .btn-content {
+        font-size: 8vw; 
+        padding: 19rem 1rem; 
+        padding-left: 18rem;
+    }
+
+    .btn-content .icon-arrow {
+        width: 1.2em; 
+        height: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-content {
+        font-size: 10vw; 
+        padding: 19rem 1rem;
+        padding-left: 15rem; 
+    }
+
+    .btn-content .icon-arrow {
+        width: 1em;
+        height: 1em;
+    }
+} */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --color-text: #ffffff;
+  --color-background: hsla(205, 100%, 60%, 0);
+  --color-outline: #0894ad00;
+  --color-shadow: #00000080;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  margin: 0 auto;
+  cursor: pointer;
+  padding-right: 25rem;
+  /* position: relative;  */
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem; /* Relative padding */
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 10vw; /* Responsive font size */
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: 1s;
+  border-radius: 100px;
+  width: 80%; /* Relative width */
+  max-width: 800px; /* Limit maximum width */
+  height: auto; /* Auto height */
+  min-height: 100px; /* Minimum height */
+  box-shadow: 0 0 0.2em 0 var(--color-background);
+  margin: 0; /* Remove margin */
+  position: absolute; /* Position the button absolutely within the container */
+  top: 50%; /* Move the button down by 50% of the container's height */
+  left: 80%; /* Move the button right by 50% of the container's width */
+  transform: translate(-50%, -50%); /* Center the button precisely */
+}
+
+.btn-content:hover,
+.btn-content:focus {
+  transition: 0.5s;
+  -webkit-animation: btn-content 1s;
+  animation: btn-content 1s;
+  outline: 0.1em solid transparent;
+  outline-offset: 0.2em;
+  box-shadow: 0 0 0.4em 0 var(--color-background);
+}
+
+.btn-content .icon-arrow {
+  transition: 0.5s;
+  margin-right: 0px;
+  transform: scale(0.9);
+  width: 1em; /* Relative to font size */
+  height: 1em; /* Relative to font size */
+  margin-left: 0.5em; /* Relative to font size */
+}
+
+.btn-content:hover .icon-arrow {
+  transition: 0.5s;
+  margin-right: 1.5em; /* Relative to font size */
+}
+
+.icon-arrow {
+  width: 1em; /* Relative to font size */
+  height: 1em; /* Relative to font size */
+  margin-left: 0.5em; /* Relative to font size */
+  position: relative;
+  top: 6%;
+}
+
+/* SVG */
+#arrow-icon-one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.btn-content:hover #arrow-icon-three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-content:hover #arrow-icon-one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-content:hover #arrow-icon-two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+  0% {
+      fill: white;
+  }
+
+  50% {
+      fill: var(--color-background);
+  }
+
+  100% {
+      fill: white;
+  }
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+  0% {
+      outline: 0.2em solid var(--color-background);
+      outline-offset: 0;
+  }
+}
+
+@keyframes btn-content {
+  0% {
+      outline: 0.2em solid var(--color-background);
+      outline-offset: 0;
+  }
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  .btn-content {
+      font-size: 8vw; /* Larger font size for smaller screens */
+      padding: 0.5rem 1rem; /* Smaller padding */
+  }
+
+  .btn-content .icon-arrow {
+      width: 1.2em; /* Slightly larger arrow for smaller screens */
+      height: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-content {
+      font-size: 10vw; /* Even larger font size for very small screens */
+      padding: 0.5rem; /* Minimal padding */
+  }
+
+  .btn-content .icon-arrow {
+      width: 1.5em; /* Larger arrow for very small screens */
+      height: 1.5em;
+  }
+}

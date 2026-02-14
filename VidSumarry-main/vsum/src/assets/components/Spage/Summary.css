@@ -1,0 +1,23 @@
+.summary-container {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: rgba(125, 25, 25, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(98, 15, 15, 0.2);
+    width: 80%;
+    max-width: 1200px;
+    color: rgb(110, 53, 53);
+  }
+  
+  #summaryText {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #5a1818;
+  }
